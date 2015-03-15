@@ -146,6 +146,9 @@ http://www.gnu.org/licenses/gpl-2.0.html
 
 	<!-- Booleans -->
 	<meta name="if:Repeat background image" content="0">
+	<meta name="if:Fixed Background image" content="0">
+	<meta name="select:Background image position" content="top" title="top">
+	<meta name="select:Background image position" content="bottom" title="bottom">
 	<meta name="if:Repeat header image" content="0">
 	<meta name="if:Repeat aside image" content="0">	
 
@@ -251,6 +254,10 @@ http://www.gnu.org/licenses/gpl-2.0.html
 	{block:IFBackgroundImage}
 	body { background: {BackgroundColor} url({image:Background}) no-repeat top center; }
 	{/block:IFBackgroundImage}
+
+	{block:IfFixedBackgroundImage}
+	body { background-attachment: fixed; }
+	{block:IfFixedBackgroundImage}
 
 	{block:IfRepeatBackgroundImage}
 	body { background-repeat:repeat; background-size: auto; }
